@@ -1,7 +1,7 @@
 public class ProjectClass{
     String name="";
     String desc="";
-    double initialCost =0;
+    double initialCost =0.0;
 
     public ProjectClass() {}
 
@@ -34,11 +34,11 @@ public class ProjectClass{
         this.desc = desc;  
     }
 
-    // public String getCost() {
-    //     return initialCost;
-    // }
-    // // setter
-    // public void setCost(String initialCost) {
-    //     this.initialCost = initialCost;
-    // }
+    public double getCost() {
+        return initialCost;
+    }
+    // setter
+    public void setCost(double initialCost) {
+        this.initialCost = initialCost;
+    }
 }
