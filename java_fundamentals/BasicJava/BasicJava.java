@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 public class BasicJava{
   public static void PrintOneto255(){
         for(int i=1;i<=255;i++){
@@ -67,7 +68,7 @@ public static void SquareValue(){
   int[] arr={1,3,4,5};
   for(int i=0;i<arr.length;i++){
   arr[i]=arr[i]*arr[i];}
-  System.out.println(arr);
+  System.out.println(Arrays.toString(arr));
 } 
 public static void eliminateNwgatine(){
  int[] arr={1, 5, 10, -2};
@@ -75,7 +76,7 @@ public static void eliminateNwgatine(){
           if(arr[i]<0){
               arr[i]=0;
           }}
-        System.out.println(arr); 
+System.out.println(Arrays.toString(arr));
 }
 public static void MaxMinAverage(int[] arr2) {
   int min=0;
@@ -101,7 +102,7 @@ public static void ShiftingValue(int[] arr2) {
           arr2[i]=arr2[i+1];
       }
       arr2[arr2.length-1]=0;
-  		System.out.println(arr2);
+  System.out.println(Arrays.toString(arr2));
   		
   	}
 public static void main (String[] args) {
