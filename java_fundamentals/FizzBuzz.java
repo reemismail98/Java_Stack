@@ -1,6 +1,6 @@
 import java.lang.Math;
 
-public class Main{
+public class FizzBuzz{
 
   public static String fizzBuzz(int number) {
       String str= number +"";
