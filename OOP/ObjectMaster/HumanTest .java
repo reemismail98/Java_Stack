@@ -1,6 +1,6 @@
 class HumanTest{
     public static void main(String[] args){
-        Human h = new Human();
+        Human h = new Human("reem");
         Wizard w = new Wizard();
         Ninja n = new Ninja();
         Samurai s=new Samurai();

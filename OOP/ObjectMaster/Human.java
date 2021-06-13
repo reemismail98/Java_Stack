@@ -1,4 +1,5 @@
 class Human{
+    String name="";
     int strength = 3;
     int stealth = 3;
     int intelligence = 3;
@@ -9,6 +10,9 @@ class Human{
         this.intelligence = 3;
         this.health = 100;
     } 
+    public Human(String name){
+        this.name=name;
+    }
     public void attack(Human x){
         x.health -= this.strength;
         System.out.println(health);
