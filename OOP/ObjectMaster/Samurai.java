@@ -13,7 +13,4 @@ class Samurai extends Human{
         this.health = health;
         System.out.println(health);
     }
-    public static  int howMany() {
-        return Samurai.numSamurai;
-    }
 }

@@ -12,7 +12,7 @@ class HumanTest{
         n.runAway();
         s.deathBlow(s,a);
         s.meditate();
-        Samurai.howMany();
+        System.out.println(Samurai.numSamurai);
 
      }
 }
