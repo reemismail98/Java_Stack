@@ -16,7 +16,7 @@ public class Counter {
 	public String index(Model model, HttpSession session) {
 		Integer count = (Integer) session.getAttribute("count");
 		if(count==null) {
-			session.setAttribute("count", 0);
+			session.setAttribute("count", 1);
 		}
 		
 		else {
@@ -31,5 +31,10 @@ public class Counter {
 	public String counter() {
 		return "counter.jsp";
 	}
-
+	
+	@RequestMapping("/remove")
+	public String reset(HttpSession session) {
+		session.removeAttribute("count");
+        return "redirect:/your_server/counter";
+	}
 }

@@ -11,6 +11,8 @@
 <body>
 
 <h3>You have visited http://your_server <c:out value="${count}"/> times  </h3><a href="/your_server">Test another visit</a><br>
+
+<a href="/your_server/remove">Reset</a>
 </body>
 </html>
 
