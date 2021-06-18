@@ -1,0 +1,20 @@
+Tips for Spring Boot
+
+1. Add the dependenciesfor any project
+        <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+        </dependency>
+
+2. Create the src/main/webapp/WEB-INF folder, inside it create the .JSP files
+
+
+3. Inside the scr/main/resources --> application.properties
+spring.mvc.view.prefix=/WEB-INF/
+
+4. inside the JSP add the following to use c:out
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
