@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<form action="/result" method="post">
+<form action="/submitdata" method="post">
 		<label>Your Name:</label> 
 		<input type="text" id="name" name="name"><br> <br>
 		<label>Dojo Location:</label> 
