@@ -32,6 +32,12 @@ private final BookRepository bookRepository;
          return null;
      }
  }
+ public Book updateBook(Book book) {
+    
+   
+    		return bookRepository.save(book);
+
+ }
  
  public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
      Optional<Book> optionalBook = bookRepository.findById(id);
@@ -41,8 +47,6 @@ if (optionalBook.isPresent()) {
 	update.setDescription(desc);
 	update.setLanguage(lang);
 	update.setNumberOfPages(numOfPages);
-
-
 return bookRepository.save(update);}
 else {
 	return null;
@@ -52,6 +56,9 @@ else {
  public void deleteBook(Long id) {
    bookRepository.deleteById(id);
 }
+ 
+
+  
  
 }
 
