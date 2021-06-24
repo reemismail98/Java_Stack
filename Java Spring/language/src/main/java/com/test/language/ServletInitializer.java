@@ -1,4 +1,4 @@
-package com.malak.Languages;
+package com.test.language;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(LanguagesApplication.class);
+		return application.sources(LanguageApplication.class);
 	}
 
 }

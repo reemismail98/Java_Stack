@@ -1,4 +1,5 @@
-package com.malak.Languages.controllers;
+package com.test.language.controllers;
+
 
 import java.util.List;
 
@@ -12,14 +13,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.malak.Languages.models.Language;
-import com.malak.Languages.services.languageService;
+import com.test.language.models.Language;
+import com.test.language.services.LanguageService;
 
 @Controller
 public class LanguageController {
-	private final languageService languageService;
+	private final LanguageService languageService;
 
-	public LanguageController(languageService languageService) {
+	public LanguageController(LanguageService languageService) {
 		this.languageService = languageService;
 	}
 
@@ -40,7 +41,7 @@ public class LanguageController {
 		}
 	}
 
-	@RequestMapping(value = "/languages/{id}/delete")
+	@RequestMapping(value = "/languages/{id}/delete",method=RequestMethod.GET)
 	public String destroy(@PathVariable("id") Long id) {
 		languageService.deleteLanguage(id);
 		return "redirect:/languages";
@@ -52,7 +53,7 @@ public class LanguageController {
 	        return "edit.jsp";
 	    }
 	    
-	@RequestMapping(value="/languages/{id}", method=RequestMethod.POST)
+	@RequestMapping(value="/languages/{id}", method=RequestMethod.PUT)
     public String update(@Valid @ModelAttribute("language") Language language, BindingResult result) {
         if (result.hasErrors()) {
             return "edit.jsp";

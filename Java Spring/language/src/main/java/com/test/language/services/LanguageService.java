@@ -1,21 +1,19 @@
-package com.malak.Languages.services;
+package com.test.language.services;
 
 import java.util.List;
 import java.util.Optional;
 
-import javax.validation.Valid;
-
 import org.springframework.stereotype.Service;
 
-import com.malak.Languages.models.Language;
-import com.malak.Languages.repositories.languageRepository;
+import com.test.language.models.Language;
+import com.test.language.repositories.LanguageRepository;
 
 @Service
-public class languageService {
-	private final languageRepository languageRepository;
+public class LanguageService {
+	private final LanguageRepository languageRepository;
 
-	public languageService(languageRepository bookRepository) {
-		this.languageRepository = bookRepository;
+	public LanguageService(LanguageRepository languageRepository) {
+		this.languageRepository = languageRepository;
 	}
 
 	public List<Language> allLanguage() {
@@ -43,3 +41,4 @@ public class languageService {
 		languageRepository.save(language);
 	}
 }
+

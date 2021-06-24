@@ -1,10 +1,10 @@
-package com.malak.Languages;
+package com.test.language;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LanguagesApplicationTests {
+class LanguageApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,5 +1,4 @@
-package com.malak.Languages.models;
-
+package com.test.language.models;
 import java.util.Date;
 
 import javax.persistence.Column;
