@@ -30,12 +30,16 @@ Java Mysql Connector (MySQL),DevTools,
     </dependency>  
 
 2.application.properties
+spring.mvc.view.prefix=/WEB-INF/
 
 spring.datasource.url=jdbc:mysql://localhost:3306/<<YOUR_SCHEMA>>
 spring.datasource.username=<<dbuser>>
 spring.datasource.password=<<dbpassword>>
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
+
+spring.mvc.hiddenmethod.filter.enabled=true
+
 
 3. package models
 class Book

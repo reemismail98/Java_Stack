@@ -70,4 +70,3 @@ public class RelationController {
         	return "profile.jsp";
 	        }
 }
-

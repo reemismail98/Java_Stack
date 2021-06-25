@@ -19,7 +19,6 @@ public class RelationService {	    // adding the book repository as a dependency
 	        this.personRepository = personRepository;
 	        this.licenseRepository=licenseRepository;
 	    }
-	    // returns all the books
 //	    public List<Person> allPersons() {
 //	        return personRepository.findAll();
 //	    }

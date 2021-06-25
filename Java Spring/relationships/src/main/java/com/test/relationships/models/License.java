@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -34,8 +36,7 @@ public class License {
  @OneToOne(fetch=FetchType.LAZY)
  @JoinColumn(name="person_id")
  private Person person;
- public License() {
-     
+ public License() {  
  }
 public Long getId() {
 	return id;
@@ -78,6 +79,15 @@ public Person getPerson() {
 }
 public void setPerson(Person person) {
 	this.person = person;
+}
+@PrePersist
+protected void onCreate() {
+    this.createdAt = new Date();
+}
+
+@PreUpdate
+protected void onUpdate() {
+    this.updatedAt = new Date();
 }
 
  
