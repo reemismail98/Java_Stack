@@ -173,7 +173,7 @@ public class BooksApi {
     public Book show(@PathVariable("id") Long id) {
         Book book = bookService.findBook(id);
         return book;
-   7. creating jsp file ** add the dependencies in poum file and the WEB-INF in the application file**
+   7. creating jsp file ** add the dependencies in pom file and the WEB-INF in the application file**
 
    
 
