@@ -18,9 +18,9 @@ public interface CountryRepository extends CrudRepository<Countery, Long> {
     @Query("SELECT c.name COUNT(i.id) AS num_city FROM Country c JOIN c.cities i GROUP BY c.id ORDER BY num_city DESC")
     List<Object[]> findNumberCityInCountry();
     @Query("SELECT c  FROM Country c  WHERE c.surface_area < 501 AND c.population > 100000")
-    List<Object[]> findCountry();
+    List<Countery> findCountry();
     @Query("SELECT c  FROM Country c  WHERE c.government_form = 'Constitutional Monarchy' AND c.life_expectancy > 75 AND c.capital > 200")
-    List<Object[]> findCountries();
+    List<Countery> findCountries();
     @Query("SELECT c.region, COUNT(c.id) AS num_countries FROM Country c GROUP BY c.region ORDER BY num_countries DESC")
 	List<Object[]> findCountryByRegion();
     

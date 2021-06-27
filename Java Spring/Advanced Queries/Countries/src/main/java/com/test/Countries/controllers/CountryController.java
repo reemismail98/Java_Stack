@@ -14,36 +14,36 @@ import com.test.Countries.services.ApiService;
 public class CountryController {
 	private ApiService apiService;
 	@GetMapping("/")
-	public List<Countery> Index() {
+	public List<Countery> index() {
 		return apiService.getCountries();
 	}
-	@GetMapping("/n/{name}")
-	public List<Object[]> CountryByName(@PathVariable("name") String name) {
+	@GetMapping("/{name}")
+	public List<Object[]> countryByName(@PathVariable("name") String name) {
 		return apiService.getCountryByLanguage(name);
 	}
-	@GetMapping("/n/cityCount")
-	public List<Object[]> CountryByCityCount() {
+	@GetMapping("/cityCount")
+	public List<Object[]> countryByCityCount() {
 		return this.apiService.getCountriesByCityCount();
 	}
-	@GetMapping("/n/region")
-	public List<Object[]> CountryByRegion() {
+	@GetMapping("/region")
+	public List<Object[]> countryByRegion() {
 		return apiService.getCountryByRegion();
 	}
 
-	@GetMapping("/c/mexico")
-	public List<City> MexicanCities() {
+	@GetMapping("/mexico")
+	public List<City> mexicanCities() {
 		return apiService.getMexicanCities();
 	}
-	@GetMapping("/c/arg")
-	public List<Object[]> BACities() {
+	@GetMapping("/Buenos")
+	public List<Object[]> buenosAiresCities() {
 		return apiService.getBuenosAiresCities();
 	}
 	@GetMapping("/l")
-	public List<Language> Languages() {
+	public List<Language> languages() {
 		return apiService.getLanguages();
 	}
-	@GetMapping("/l/c")
-	public List<Object[]> CountryLangs() {
+	@GetMapping("/languagues")
+	public List<Object[]> countryLanguagues() {
 		return apiService.getCountryLanguagues();
 	}
 }
