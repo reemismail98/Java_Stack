@@ -13,6 +13,7 @@
 <h1><c:out value= "${person.firstName } ${person.lastName }" /></h1>
 <p>  Number   : <c:out value = "${license.number }" />  </p>
 <p>  State   : <c:out value = "${license.state }" />  </p>
-<p>  Expiration Date   : <c:out value = "${license.expirationDate }" />  </p>
+<p>  Expiration Date   : <c:out value = "${license.expirationDateFormat() }" />  </p>
+
 </body>
 </html>

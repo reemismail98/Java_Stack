@@ -37,20 +37,14 @@ public class RelationController {
 	            return "redirect:/person/new";
 	        }
 	    }
-//	    @RequestMapping("/license/new")
-//	    public String newLicense(@ModelAttribute("license") License license, Model model) {
-//	    	List<Person> persons = relationService.allPersons();
-//	        model.addAttribute("persons", persons);
-//	        return "license.jsp";
-//	    }
-	    
+
 	    @RequestMapping("/license/new")
 	    public String newLicense(@ModelAttribute("license") License license, Model model) {
-	    	List<Person> persons = relationService.unlicenseUsers();
-	        model.addAttribute("persons", persons);
+	    	List<Person> person=relationService.unlicenseUsers();
+	        model.addAttribute("persons", person);
 	        return "license.jsp";
 	    }
-	    @RequestMapping(value="/license/new/create", method=RequestMethod.POST)
+	    @RequestMapping(value="/license/new", method=RequestMethod.POST)
 	    public String create(@Valid @ModelAttribute("license") License license, BindingResult result) {
 	        if (result.hasErrors()) {
 	            return "license.jsp";
@@ -63,8 +57,8 @@ public class RelationController {
 	    @RequestMapping("/persons/{id}")
 	    public String show(@PathVariable("id") Long id,Model model) {
         	Person person=relationService.findPerson(id); 
+        	License license=relationService.findLicenes(id); 
         	 model.addAttribute("person",person);
-         	License license=relationService.findLicenes(id); 
        	 model.addAttribute("license",license);
 
         	return "profile.jsp";

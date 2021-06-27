@@ -1,5 +1,6 @@
 package com.test.relationships.models;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -88,6 +89,10 @@ protected void onCreate() {
 @PreUpdate
 protected void onUpdate() {
     this.updatedAt = new Date();
+}
+public String expirationDateFormat() {
+	SimpleDateFormat formatdate = new SimpleDateFormat("MM/dd/yyyy");
+	return formatdate.format(expirationDate);
 }
 
  

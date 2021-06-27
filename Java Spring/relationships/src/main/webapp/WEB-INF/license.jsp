@@ -11,14 +11,14 @@
 <body>
 
 <h1> NEW License</h1>
-<form:form action="/license/new/create" method="post" modelAttribute="license">
+<form:form action="/license/new" method="post" modelAttribute="license">
     <p>
         <form:label path="person">person</form:label>
-        <select  >
+        <form:select path="person">
 				<c:forEach items="${persons}" var="person">
-					<option value="${person.firstName}">${person.firstName}  ${person.lastName}</option>
+					<option value="${person.id}">${person.firstName}  ${person.lastName}</option>
 				</c:forEach>
-			</select>
+			</form:select>
 			<form:errors path="person"/>
         
     </p>

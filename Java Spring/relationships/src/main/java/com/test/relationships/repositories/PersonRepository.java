@@ -14,6 +14,7 @@ package com.test.relationships.repositories;
 		
 		    List<Person> findAll();
 
+
 			List<Person> findByLicenseIdIsNull();
 
 

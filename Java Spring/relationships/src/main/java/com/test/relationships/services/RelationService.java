@@ -19,11 +19,10 @@ public class RelationService {	    // adding the book repository as a dependency
 	        this.personRepository = personRepository;
 	        this.licenseRepository=licenseRepository;
 	    }
-//	    public List<Person> allPersons() {
-//	        return personRepository.findAll();
-//	    }
+
 	    public List<Person> unlicenseUsers() {
 			return personRepository.findByLicenseIdIsNull();
+			
 		}
 	    
 	    public Person createPerson(Person p) {
@@ -52,6 +51,7 @@ public class RelationService {	    // adding the book repository as a dependency
 			return licenseRepository.save(license);
 			
 		}
+
 	}
 
 
